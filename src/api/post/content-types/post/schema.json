@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "body": {
+      "type": "richtext",
+      "required": false
+    },
+    "featured_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "short_description": {
+      "type": "richtext",
+      "maxLength": 425
+    },
+    "author_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 90
+    },
+    "author": {
+      "type": "string",
+      "default": "Rock Digital",
+      "required": false
+    },
+    "read_time": {
+      "type": "string",
+      "default": "5mins"
+    }
+  }
+}
