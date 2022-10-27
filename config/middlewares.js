@@ -6,9 +6,9 @@ module.exports = [
     name: "strapi::cors",
     config: {
       enabled: true,
-      methods: "*",
-      headers: "*",
-      origin: ["http://localhost:1337", "191.101.233.33:1337/admin"],
+      methods: ["*"],
+      headers: ["*"],
+      origin: ["http://localhost:1337", "*"],
     },
   },
   "strapi::logger",
