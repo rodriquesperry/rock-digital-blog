@@ -8,7 +8,7 @@ module.exports = [
       enabled: true,
       methods: "*",
       headers: "*",
-      origin: ["http://localhost:1337"],
+      origin: ["http://localhost:1337", "191.101.233.33:1337/admin"],
     },
   },
   "strapi::logger",
