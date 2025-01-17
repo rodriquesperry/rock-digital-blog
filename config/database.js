@@ -4,7 +4,7 @@ module.exports = ({ env }) => ({
     connection: {
       host: env("DATABASE_HOST", "127.0.0.1"),
       port: env.int("DATABASE_PORT", 3306),
-      database: env("DATABASE_NAME", "rock_digital_blog"),
+      database: env("DATABASE_NAME", "rock_digital"),
       user: env("DATABASE_USERNAME", "root"),
       password: env("DATABASE_PASSWORD", "R@cky410!!"),
       ssl: env.bool("DATABASE_SSL", false),
