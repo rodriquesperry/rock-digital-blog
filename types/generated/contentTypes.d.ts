@@ -397,7 +397,6 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     phone_num: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    referral: Schema.Attribute.String;
     service: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

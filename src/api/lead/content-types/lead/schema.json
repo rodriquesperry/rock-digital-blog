@@ -22,9 +22,6 @@
     "description": {
       "type": "text"
     },
-    "referral": {
-      "type": "string"
-    },
     "phone_num": {
       "type": "string"
     },

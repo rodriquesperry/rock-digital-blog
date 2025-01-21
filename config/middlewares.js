@@ -7,7 +7,13 @@ module.exports = [
     config: {
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"],
-      origin: ["http://localhost:3000", "http://127.0.0.1:1337"],
+      origin: [
+        "http://localhost:3000",
+        "http://127.0.0.1:1337",
+        "https://rockdigital-v2.vercel.app",
+        "https://rockdigital-v2-git-main-rodriques-projects.vercel.app",
+        "https://rockdigital-v2-ch1odsqxl-rodriques-projects.vercel.app",
+      ],
     },
   },
   "strapi::logger",
