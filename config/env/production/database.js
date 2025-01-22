@@ -1,14 +1,14 @@
 module.exports = ({ env }) => ({
   connection: {
-    client: 'mysql',
+    client: "mysql",
     connection: {
-      host: env("DATABASE_HOST", "rockdigital.agency"),
-      port: env.int("DATABASE_PORT", 3306),
-      database: env("DATABASE_NAME", "rock_digital"),
-      user: env("DATABASE_USERNAME", "root"),
-      password: env("DATABASE_PASSWORD", "R@cky410!!"),
+      host: env("DATABASE_HOST"),
+      port: env.int("DATABASE_PORT"),
+      database: env("DATABASE_NAME"),
+      user: env("DATABASE_USERNAME"),
+      password: env("DATABASE_PASSWORD"),
       ssl: {
-        rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // Use true for secure connections
+        rejectUnauthorized: env.bool("DATABASE_SSL_SELF", true), // Use true for secure connections
       },
     },
     debug: false,
