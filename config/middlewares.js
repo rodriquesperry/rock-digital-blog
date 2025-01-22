@@ -10,9 +10,7 @@ module.exports = [
       origin: [
         "http://localhost:3000",
         "http://127.0.0.1:1337",
-        "https://rockdigital-v2.vercel.app",
-        "https://rockdigital-v2-git-main-rodriques-projects.vercel.app",
-        "https://rockdigital-v2-ch1odsqxl-rodriques-projects.vercel.app",
+        "https://rockdigital.agency",
       ],
     },
   },
