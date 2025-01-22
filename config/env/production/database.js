@@ -8,6 +8,7 @@ module.exports = ({ env }) => ({
       user: env("DATABASE_USERNAME"),
       password: env("DATABASE_PASSWORD"),
       ssl: {
+        ca: fs.readFileSync('/Volumes/Rods Hard Drive/Rock Digital/ca-certificate.crt'),
         rejectUnauthorized: env.bool("DATABASE_SSL_SELF", true), // Use true for secure connections
       },
     },
