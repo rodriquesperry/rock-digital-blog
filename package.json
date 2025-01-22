@@ -2,7 +2,7 @@
   "name": "rockdigital-blog",
   "private": true,
   "version": "0.1.0",
-  "description": "The Rock Digital Blog",
+  "description": "The Rock Digital Strapi",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
