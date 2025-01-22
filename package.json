@@ -12,6 +12,7 @@
   "dependencies": {
     "@strapi/plugin-users-permissions": "^5.7.0",
     "@strapi/strapi": "5.8.0",
+    "@types/react": "^18.3.18",
     "esbuild": "^0.24.2",
     "glob": "^11.0.0",
     "inflight": "^1.0.6",
