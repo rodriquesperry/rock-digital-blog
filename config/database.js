@@ -12,9 +12,7 @@ module.exports = ({ env }) => {
         password: env("DATABASE_PASSWORD"),
         connectTimeout: 10000,
         ssl: {
-          ca: fs.readFileSync(
-            "/Volumes/Rods Hard Drive/Rock Digital/ca-certificate.crt"
-          ),
+          ca: env("DATABASE_CA_CERT"),
         },
       },
     },
