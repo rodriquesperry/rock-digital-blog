@@ -1,4 +1,17 @@
 const fs = require("fs");
+const path = require("path");
+
+const caCertificateBase64 = process.env.CA_CERT_BASE64;
+
+const caCertificatePath = path.resolve(__dirname, './ssl/ca-certificate.crt');
+
+if (caCertificateBase64) {
+  fs.mkdirSync(path.dirname(caCertificatePath), { recursive: true });
+  fs.writeFileSync(caCertificatePath, Buffer.from(caCertificateBase64, 'base64'));
+  console.log(`CA certificate written to ${caCertificatePath}`);
+} else {
+  console.error('CA_CERT_BASE64 environment variable is not set.');
+}
 
 module.exports = ({ env }) => {
   return {
@@ -12,7 +25,7 @@ module.exports = ({ env }) => {
         password: env("DATABASE_PASSWORD"),
         connectTimeout: 10000,
         ssl: {
-          ca: fs.readFileSync(env("DATABASE_CA_PATH"), "utf8"),
+          ca: fs.readFileSync(caCertificatePath, 'utf8'),
         },
       },
     },
