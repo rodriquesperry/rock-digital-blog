@@ -35,11 +35,11 @@ module.exports = ({ env }) => {
         password: env("DATABASE_PASSWORD"),
         connectTimeout: 10000,
         ssl: {
-          ca: env("DATABASE_CA_CERT"),
+          ca: fs.readFileSync(env("DATABASE_CA_PATH"), "utf8"),
           rejectUnauthorized: env.bool("DATABASE_SSL_SELF", true), // Use true for secure connections
         },
       },
-      debug: false,
+      debug: true,
     },
   };
 };

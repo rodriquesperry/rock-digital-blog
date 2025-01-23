@@ -112,4 +112,4 @@ exports
 *.cache
 build
 .strapi-updater.json
-config/ssl
+config/ssl/ca-certificate.crt

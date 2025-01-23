@@ -12,7 +12,7 @@ module.exports = ({ env }) => {
         password: env("DATABASE_PASSWORD"),
         connectTimeout: 10000,
         ssl: {
-          ca: env("DATABASE_CA_CERT"),
+          ca: fs.readFileSync(env("DATABASE_CA_PATH"), "utf8"),
         },
       },
     },
