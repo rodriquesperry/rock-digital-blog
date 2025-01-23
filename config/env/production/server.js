@@ -1,7 +1,8 @@
 module.exports = ({ env }) => ({
-  url: env("APP_URL", "https://your-app-domain.com"), // Public URL of your app
-  proxy: true,
+  host: env("HOST", "0.0.0.0"),
+  port: env.int("PORT", 1337),
   app: {
-    keys: env.array("APP_KEYS", ["your-app-key-1", "your-app-key-2"]),
+    keys: env.array("APP_KEYS"),
   },
+  url: "https://rockdigital.agency",
 });
