@@ -3,11 +3,11 @@ const path = require("path");
 
 const caCertificateBase64 = process.env.CA_CERT_BASE64;
 
-const caCertificatPath = path.resolve(__dirname, './ssl/ca-certificate.crt');
+const caCertificatePath = path.resolve(__dirname, './ssl/ca-certificate.crt');
 
 if (caCertificateBase64) {
-  fs.mkdirSync(path.dirname(caCertificatPath), { recursive: true });
-  fs.writeFileSync(caCertificatPath, Buffer.from(caCertificateBase64, 'base64'));
+  fs.mkdirSync(path.dirname(caCertificatePath), { recursive: true });
+  fs.writeFileSync(caCertificatePath, Buffer.from(caCertificateBase64, 'base64'));
   console.log(`CA certificate written to ${caCertificatePath}`);
 } else {
   console.error('CA_CERT_BASE64 environment variable is not set.');
