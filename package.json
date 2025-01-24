@@ -31,9 +31,9 @@
     "uuid": "7a22f181-abe1-48e2-a51a-712f989b6dc4"
   },
   "engines": {
-    "node": "20.11.0",
-    "npm": ">=6.x.x"
-  },
+  "node": ">=20.17.0 || >=22.9.0",
+  "npm": "^10.2.0"
+},
   "license": "MIT",
   "devDependencies": {
     "esbuild-register": "^3.6.0"
