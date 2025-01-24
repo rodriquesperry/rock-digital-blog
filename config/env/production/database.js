@@ -26,10 +26,10 @@ module.exports = ({ env }) => {
         connectTimeout: 10000,
         ssl: {
           ca: fs.readFileSync(caCertificatePath, 'utf8'),
-          rejectUnauthorized: env.bool("DATABASE_SSL_SELF", true), // Use true for secure connections
+          // rejectUnauthorized: env.bool("DATABASE_SSL_SELF", true), // Use true for secure connections
         },
       },
-      debug: true,
+      // debug: true,
     },
   };
 };
