@@ -11,7 +11,7 @@ module.exports = [
         "http://localhost:3000",
         "http://127.0.0.1:1337",
         "https://rockdigital.agency",
-        "https://rockdigital-v2-3ynnuk96o-rodriques-projects.vercel.app'",
+        "https://rockdigital-v2-3ynnuk96o-rodriques-projects.vercel.app",
       ],
     },
   },
