@@ -6,6 +6,6 @@ module.exports = ({ env }) => ({
   },
   url: "https://rockdigital.agency",
   admin: {
-    url: "/admin",
+    path: "/admin",
   },
 });
