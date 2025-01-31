@@ -56,6 +56,16 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "user_uuid": {
+      "type": "string",
+      "required": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "posts"
     }
   }
 }

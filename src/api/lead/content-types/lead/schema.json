@@ -35,7 +35,7 @@
       "default": false,
       "required": true
     },
-    "uuid": {
+    "lead_uuid": {
       "type": "string",
       "required": true,
       "unique": true

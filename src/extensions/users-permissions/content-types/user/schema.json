@@ -66,8 +66,14 @@
       "configurable": false
     },
     "user_uuid": {
-      "type": "uid",
+      "type": "string",
       "required": true
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "users_permissions_user"
     }
   }
 }
