@@ -455,6 +455,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     author: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Rock Digital'>;
     author_image: Schema.Attribute.Media<'images'>;
+    author_uuid: Schema.Attribute.String & Schema.Attribute.Required;
     body: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -478,7 +479,6 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    user_uuid: Schema.Attribute.String & Schema.Attribute.Required;
     users_permissions_user: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::users-permissions.user'

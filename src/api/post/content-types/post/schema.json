@@ -57,7 +57,7 @@
       "type": "uid",
       "targetField": "title"
     },
-    "user_uuid": {
+    "author_uuid": {
       "type": "string",
       "required": true
     },
