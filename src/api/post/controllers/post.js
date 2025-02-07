@@ -40,7 +40,8 @@ module.exports = createCoreController("api::post.post", ({ strapi }) => ({
 
     // const sanitizedEntities = await this.sanitizeOutput(entities, ctx);
 
-    return this.transformResponse(ctx);
+    return super.find(ctx);
+    // return this.transformResponse();
   },
 
   async findOne(ctx) {
