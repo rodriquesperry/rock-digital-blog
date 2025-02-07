@@ -28,19 +28,19 @@ module.exports = createCoreController("api::post.post", ({ strapi }) => ({
   async find(ctx) {
     const user = ctx.state.user; // Get authenticated user
 
-    if (!user) {
-      return ctx.unauthorized("You must be logged in.");
-    }
+    // if (!user) {
+    //   return ctx.unauthorized("You must be logged in.");
+    // }
 
-    // Ensure that only posts created by the current user are returned
-    const entities = await strapi.db.query("api::post.post").findMany({
-      where: { author_uuid: user.uuid },
-      populate: true,
-    });
+    // // Ensure that only posts created by the current user are returned
+    // const entities = await strapi.db.query("api::post.post").findMany({
+    //   where: { author_uuid: user.uuid },
+    //   populate: true,
+    // });
 
-    const sanitizedEntities = await this.sanitizeOutput(entities, ctx);
+    // const sanitizedEntities = await this.sanitizeOutput(entities, ctx);
 
-    return this.transformResponse(sanitizedEntities);
+    return this.transformResponse(ctx);
   },
 
   async findOne(ctx) {
